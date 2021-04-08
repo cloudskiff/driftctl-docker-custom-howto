@@ -13,7 +13,11 @@ Here´s how we do it:
 - First confirm that you can run `driftctl` from [the official docker image](https://hub.docker.com/repository/docker/cloudskiff/driftctl):
 
 ```shell
-$ docker run -t --rm -v $(pwd):/app:ro -e AWS_ACCESS_KEY_ID=AKIAxxx -e AWS_SECRET_ACCESS_KEY=XXX -e AWS_REGION=us-east-1 cloudskiff/driftctl scan --from tfstate+s3://mycorp-bucket/tfstates-folder/ 
+$ docker run -t --rm -v $(pwd):/app:ro \
+  -e AWS_ACCESS_KEY_ID=AKIAxxx \
+  -e AWS_SECRET_ACCESS_KEY=XXX \
+  -e AWS_REGION=us-east-1 \
+  cloudskiff/driftctl scan --from tfstate+s3://mycorp-bucket/tfstates-folder/ 
 [...]
 ```
 
@@ -56,7 +60,11 @@ $ docker build -t mycorp-driftctl .
 - Finally run your own docker image of `driftctl`:  
 
 ```shell
-$ docker run -t --rm -e AWS_ACCESS_KEY_ID=AKIAxxx -e AWS_SECRET_ACCESS_KEY=xxx -e AWS_REGION=us-east-1 mycorp-driftctl:latest scan --from tfstate+s3://driftctl-tfstates/ 
+$ docker run -t --rm \
+  -e AWS_ACCESS_KEY_ID=AKIAxxx \
+  -e AWS_SECRET_ACCESS_KEY=xxx \
+  -e AWS_REGION=us-east-1 \
+  mycorp-driftctl:latest scan --from tfstate+s3://driftctl-tfstates/ 
 [...]
 ```
 
