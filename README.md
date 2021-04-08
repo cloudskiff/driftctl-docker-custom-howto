@@ -1,4 +1,4 @@
-# Build your own driftctl Docker image with your own .driftignore file
+# How to build your own driftctl Docker image (including your own .driftignore file)
 
 The easiest way to use driftctl along with your own custom `.driftignore` file is to build your own docker container image, based on [the official one](https://hub.docker.com/repository/docker/cloudskiff/driftctl).
 
