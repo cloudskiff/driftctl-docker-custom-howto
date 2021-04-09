@@ -24,26 +24,25 @@ $ docker run -t --rm -v $(pwd):/app:ro \
 - Now  create a new folder (that will eventually become a git repository later) and add your own `.driftignore` file to it:
 
 ```shell
-$ mkdir mycorp-driftctl-docker-custom 
-$ touch .driftignore 
+mkdir mycorp-driftctl-docker-custom 
+touch .driftignore 
 ```
 
 - Add all the content you need into this `.driftignore` file, like:
 
 ```shell
-$ echo "aws_iam_user.terraform" >> .driftignore 
-$ [...lots of copy-pasting]
+echo "aws_iam_user.terraform" >> .driftignore 
+[...lots of copy-pasting...]
 ```
 
-- Now, let´s create our own Docker image from the official one; create a `Dockerfile` and open it:
+- Now, let's create our own Docker image from the official one; create a `Dockerfile` and open it:
 
 ```shell
-$ touch Dockerfile 
+touch Dockerfile 
 ```
 
 - Add the following content:  
 
- 
 ```Dockerfile
 FROM cloudskiff/driftctl 
 WORKDIR /app 
@@ -80,5 +79,4 @@ The next steps can include:
 - Automatically rebuilding your own docker image when the `.driftignore` file changes
 - Adding your docker image scan to an hourly cron job so you are notified when something drifts
 
-We´d love to hear about your own use cases, come tell us how you use driftctl! Thanks for reading!
-
+We'd love to hear about your own use cases, come tell us how you use driftctl! Thanks for reading!
