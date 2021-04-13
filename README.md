@@ -4,8 +4,8 @@ The easiest way to use driftctl along with your own custom `.driftignore` file i
 
 Requirements for this tutorial:
 
-- an AWS IAM Keypair for driftctl (read more [in the documentation for the least priviledged policy](https://docs.driftctl.com/0.7.0/providers/aws/authentication))
-- your Terraform states on S3 (read more [in the docs how to access them](https://docs.driftctl.com/0.7.0/usage/cmd/scan-usage#--from))
+- an AWS IAM Keypair for driftctl (read more [in the documentation for the least priviledged policy](https://docs.driftctl.com/aws/policy))
+- your Terraform states on S3 (read more [in the docs how to access them](https://docs.driftctl.com/0.7.1/usage/cmd/scan-usage#--from))
 - Docker or similar
 
 Here´s how we do it:
